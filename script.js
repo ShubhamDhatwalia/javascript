@@ -290,9 +290,47 @@ let newArr = arr.filter((val)=>{
 console.log(newArr);
 
 
+//let marks = [96, 44, 44, 35, 34];
+
+let marks90 = marks.filter((val)=>{
+    return val>90;
+});
+console.log(marks90);
+
+
 // Reduce in Array ---------------------------------------------
 
 const result = arr.reduce((res, curr)=>{
     return res+curr;
 });
 console.log(result);
+
+
+const largest = arr.reduce((prev,curr)=>{
+    return prev > curr ? prev:curr;
+});
+console.log(largest);
+
+
+
+
+// Paractice work ------------------------------------------------
+
+let n =prompt("ENTER A NUMBER");
+
+let array = [];
+
+for(let i=1; i<=n; i++){
+    array[i-1] = i;
+}
+console.log(array);
+
+let total = array.reduce((prev, curr)=>{
+    return prev+curr;
+});
+console.log(total);
+
+let product = array.reduce((prev,curr)=>{
+    return prev*curr;
+});
+console.log(product);
