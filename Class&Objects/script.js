@@ -192,16 +192,33 @@ function getData(dataId, ){
 
 // Actual proomise chaining ----------------------------------
 
-getData(1).then((res)=>{
-    return getData(2);
-}).then((res)=>{
-    console.log(res);
-}).catch((err)=>{
-    console.log(err);
-});
+// getData(1).then((res)=>{
+//     return getData(2);
+// }).then((res)=>{
+//     console.log(res);
+// }).catch((err)=>{
+//     console.log(err);
+// });
 
 
 // Asysnc - await ---------------------------------------------
+
+// async function getAllData(){
+//     await getData(1);
+//     await getData(2);
+// }
+// getAllData();
+
+
+
+
+// IIFE   --- Immediately Invoked Function Expression ----------
+
+(async function getAllData(){
+    await getData(1);
+    await getData(2);
+    await getData(3);
+})();
 
 
 
@@ -243,3 +260,5 @@ getData(1).then((res)=>{
 // }).catch((err)=>{
 //     console.log(err);
 // });
+
+
