@@ -20,7 +20,7 @@ const karanArjun ={
 };
 
 karanArjun.__proto__ = employee;
-
+karanArjun.calcTax();
 
 
 ///      class with objects -------------------------
