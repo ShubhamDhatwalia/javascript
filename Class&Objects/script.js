@@ -171,7 +171,7 @@ calculator(1,2,sum);
 // });
 
 
-function getData(dataId, ){
+function getData(dataId){
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
             console.log("data", dataId);
@@ -203,22 +203,22 @@ function getData(dataId, ){
 
 // Asysnc - await ---------------------------------------------
 
-// async function getAllData(){
-//     await getData(1);
-//     await getData(2);
-// }
-// getAllData();
+async function getAllData(){
+    await getData(1);
+    await getData(2);
+}
+getAllData();
 
 
 
 
 // IIFE   --- Immediately Invoked Function Expression ----------
 
-(async function getAllData(){
-    await getData(1);
-    await getData(2);
-    await getData(3);
-})();
+// (async function getAllData(){
+//     await getData(1);
+//     await getData(2);
+//     await getData(3);
+// })();
 
 
 
